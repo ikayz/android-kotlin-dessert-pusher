@@ -143,6 +143,31 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        Timber.i("onResume was created")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("onPause was created")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("onDestroy was called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart was created")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i("onStop was created")
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return super.onCreateOptionsMenu(menu)
