@@ -83,6 +83,11 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         binding.dessertButton.setImageResource(currentDessert.imageId)
     }
 
+    override fun onStart() {
+        super.onStart()
+        Timber.i("onStart was created")
+    }
+
     /**
      * Updates the score when the dessert is clicked. Possibly shows a new dessert.
      */
